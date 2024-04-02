@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+// import { SessionProvider } from "next-auth/react";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -16,11 +17,29 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
-        <h2>Header</h2>
-        {children}
-        <h2>Footer</h2>
-      </body>
+        <body className={inter.className}>
+          <h2>Header</h2>
+          {children}
+          <h2>Footer</h2>
+        </body>
     </html>
   );
 }
+
+// _component banane se jiss compoennt ko hame as a routing use nhi krna hai wo hum bana sakte hai
+// for child component we have to use the "use client" on the top of page
+// If hum image me src tag me kisi website se img link laga rahe hai toh use next.config me batana padta hai
+
+// exprort const metadata = {
+//  title:"",
+//  description : ""
+// }
+
+{
+  /* <Script></Script> */
+}
+// first Render
+
+
+// blogpost\[slug] - page.ts -  for dynamic url acesss
+// blogpost\[...val] - page.ts -  for multiple parameter like blogpost/1/2/3/4 - this number it will print in array
